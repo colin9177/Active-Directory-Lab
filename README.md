@@ -77,7 +77,9 @@ After installing AD DS, several administrative tasks were completed:
 
 This simulates real-world user and access management in enterprise environments.
 
----
+<img width="966" height="1080" alt="Screenshot (57)" src="https://github.com/user-attachments/assets/e5f1f753-85e6-4974-9569-f70f4aa05cb0" />
+<img width="960" height="1080" alt="Screenshot (58)" src="https://github.com/user-attachments/assets/8c1573aa-77b3-467f-a643-f242f4a3cad9" />
+<img width="967" height="1080" alt="Screenshot (59)" src="https://github.com/user-attachments/assets/c8b7494c-706b-4902-b8b3-f9c448ad51c7" />
 
 ### 4. Client Machine Setup
 
@@ -91,8 +93,12 @@ Steps included:
 - Logging in with domain user credentials
 
 Successful login confirmed proper domain communication.
+<img width="961" height="1080" alt="Screenshot (60)" src="https://github.com/user-attachments/assets/fea8fd0f-df09-44f4-8d14-e801e86fca92" />
+<img width="969" height="1080" alt="Screenshot (61)" src="https://github.com/user-attachments/assets/2f79a32f-61c7-4b3e-ab05-ed1c8eaa7883" />
+<img width="1920" height="1080" alt="Screenshot (62)" src="https://github.com/user-attachments/assets/4992b038-4923-4d41-9d70-4140ff26e16f" />
+<img width="1920" height="1080" alt="Screenshot (63)" src="https://github.com/user-attachments/assets/f4f161c7-bd8d-4e74-b5ab-62dcda3bc71f" />
+<img width="1920" height="1080" alt="Screenshot (64)" src="https://github.com/user-attachments/assets/4e4da684-3968-4fec-b69c-3ff5020fd886" />
 
----
 
 ## Challenges Encountered
 
