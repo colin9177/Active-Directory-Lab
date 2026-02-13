@@ -19,3 +19,4 @@ This lab helped me understand how domain controllers manage authentication.
 ## Screenshots
 
 ![Screenshot](Screenshot(57).png)
+
