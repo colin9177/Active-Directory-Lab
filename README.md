@@ -1,4 +1,4 @@
-# Active Directory Home Lab – Jake’s Tech Lab
+# Active Directory Home Lab 
 
 ## Project Overview
 
