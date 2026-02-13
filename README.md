@@ -15,3 +15,4 @@ I created a Windows Active Directory lab in Azure to simulate a business network
 
 ## What I Learned
 This lab helped me understand how domain controllers manage authentication.
+
