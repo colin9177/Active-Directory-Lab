@@ -99,6 +99,111 @@ Successful login confirmed proper domain communication.
 <img width="1920" height="1080" alt="Screenshot (63)" src="https://github.com/user-attachments/assets/f4f161c7-bd8d-4e74-b5ab-62dcda3bc71f" />
 <img width="1920" height="1080" alt="Screenshot (64)" src="https://github.com/user-attachments/assets/4e4da684-3968-4fec-b69c-3ff5020fd886" />
 
+---
+
+## Advanced Active Directory Configuration
+
+This section documents additional administrative tasks performed to simulate real-world enterprise Active Directory management. These exercises focused on security policy enforcement, automation, delegation of permissions, and organizational structure.
+
+---
+
+### 1. Domain Password Policy Configuration
+
+Password policies are enforced at the domain level using Group Policy to maintain security standards across all users.
+
+For this lab, the Default Domain Policy was edited for educational purposes. In production environments, organizations often use more advanced or fine-grained password policies.
+
+Steps performed:
+
+- Opened **Group Policy Management**
+- Expanded: Forest → Domains → lab.local
+- Edited the **Default Domain Policy**
+- Navigated to:
+
+  Computer Configuration  
+  → Policies  
+  → Windows Settings  
+  → Security Settings  
+  → Account Policies  
+  → Password Policy
+
+- Configured key security settings including:
+  - Maximum password age
+  - Minimum password length
+
+This exercise demonstrated how centralized security policies are enforced domain-wide.
+
+---
+
+### 2. Logon Script Implementation
+
+Logon scripts automate actions when users sign in. They are commonly used to configure environments, display messages, or map network resources.
+
+A basic logon script was created to demonstrate automated user interaction.
+
+Steps performed:
+
+- Created a text file named **logon.bat**
+- Added the following command:
+
+  `echo Welcome to the domain`
+
+- Saved the file to the SYSVOL scripts directory:
+
+  `C:\Windows\SYSVOL\sysvol\lab.local\scripts`
+
+SYSVOL is a shared domain controller folder that stores files required by all domain users, including Group Policy objects and scripts.
+
+The script was assigned to a user account through:
+
+- Active Directory Users and Computers
+- User Properties → Profile tab
+- Entered **logon.bat** in the Logon Script field
+
+This confirmed that user logon automation was functioning correctly.
+
+---
+
+### 3. Delegating Password Reset Permissions
+
+Permission delegation allows non-administrative staff to perform limited management tasks. This mirrors real-world helpdesk workflows.
+
+Steps performed:
+
+- Right-clicked the Users Organizational Unit  
+  (_Branches → Houston → Users)
+- Selected **Delegate Control**
+- Added the **Helpdesk** security group
+- Assigned permissions to:
+  - Reset user passwords
+  - Force password change at next logon
+
+This demonstrated role-based access control and secure delegation practices.
+
+---
+
+### 4. Organizing Computer Objects into Branch OUs
+
+By default, newly joined domain computers are placed in a generic container. For proper management and policy application, systems must be organized into appropriate Organizational Units.
+
+Steps performed:
+
+- Opened Active Directory Users and Computers
+- Located the client machine (e.g., CLIENT01)
+- Moved the computer object to:
+
+  _Branches → Houston → Workstations
+
+This ensured the device received the correct Group Policy settings and organizational structure.
+
+
+<img width="967" height="1080" alt="Screenshot (65)" src="https://github.com/user-attachments/assets/77353d35-0401-44b0-a749-1ede0aa8d5c7" />
+<img width="969" height="1080" alt="Screenshot (66)" src="https://github.com/user-attachments/assets/ffbdcdcd-5f00-43a9-9914-cb7b7634d288" />
+<img width="960" height="1080" alt="Screenshot (67)" src="https://github.com/user-attachments/assets/9cf2ab7b-7545-4f19-8b50-9e9656d1f48f" />
+<img width="960" height="1080" alt="Screenshot (68)" src="https://github.com/user-attachments/assets/2b5f7f03-1c7c-4057-a270-7e2fb4198317" />
+<img width="961" height="1080" alt="Screenshot (69)" src="https://github.com/user-attachments/assets/9dc7d6e2-2353-4ced-a15c-6bd94d42608d" />
+<img width="955" height="1080" alt="Screenshot (70)" src="https://github.com/user-attachments/assets/0f30f41b-f17f-4dff-b942-3d61812b0ea8" />
+
 
 ## Challenges Encountered
 
@@ -150,9 +255,7 @@ The project also improved my confidence working with enterprise-style infrastruc
 
 ---
 
-## Screenshots
 
-(Add your screenshots below this section)
 
 
 
